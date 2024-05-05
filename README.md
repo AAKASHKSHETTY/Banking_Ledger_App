@@ -51,6 +51,14 @@ Here’s a breakdown of the key criteria we’ll be considering when grading you
 ## Assumptions
 *Replace this: If you made any assumption in designing the service, document it here*
 
+1) User can only transact in the initial currency he has loaded the account with.
+
+2) Load(Credits) will create new user if not already present in the system.
+
+3) Authorizations(Debits) will only be allowed if user is present in system, ie. if he has loaded any amount into our account prior. Any authorization by a non-user is not saved in event logs.
+
+4) Two or more transactions can have same message Ids.
+
 ## Bonus: Deployment considerations
 *Replace this: If I were to deploy this, I would host it in this way with these technologies.*
 
