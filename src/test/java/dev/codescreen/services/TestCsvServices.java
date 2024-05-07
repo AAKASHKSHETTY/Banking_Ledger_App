@@ -26,7 +26,7 @@ public class TestCsvServices {
     // Fetching CSV File for parameterized Tests, as to perform multiple both authorization and load on multiple test cases.
     @ParameterizedTest
     @CsvFileSource(resources = "/test1.csv", numLinesToSkip = 1)
-    public void testMultipleStatements(String action, String msgId, String userId, String debitOrCredit, String amount, String expectedResponseCode, String expectedBalance) throws Exception {
+    public void testMultipleStatements(String action, String msgId, String userId, String debitOrCredit, String amount, String currency,String expectedResponseCode, String expectedBalance) throws Exception {
 
         // If action is AUTHORIZATION Run tests for Authorization.
         if (action.equals("AUTHORIZATION")){
@@ -34,7 +34,7 @@ public class TestCsvServices {
             // Create Authorization Object to populate the inputs.
             Amount TestTransactionAmount = Amount.builder()
             .amount(amount)
-            .currency("USD")
+            .currency(currency)
             .debitOrCredit(DebitCredit.valueOf(debitOrCredit))
             .build();
 
@@ -58,7 +58,7 @@ public class TestCsvServices {
             // Create Load Object to populate the inputs.
             Amount TestLoadAmount = Amount.builder()
             .amount(amount)
-            .currency("USD")
+            .currency(currency)
             .debitOrCredit(DebitCredit.valueOf(debitOrCredit))
             .build();
             

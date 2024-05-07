@@ -59,8 +59,9 @@ public class UnitTestServices {
         .transactionAmount(TestTransactionAmount)
         .build();
 
-        HashMap<String, Amount> balances1 = new HashMap<>();
-        balances1.put("1",TestTransactionAmount);
+        HashMap<String, HashMap<String, Amount>> balances1 = new HashMap<>();
+        HashMap<String, Amount> innerMap = new HashMap<>(){{put("USD",TestTransactionAmount);}};
+        balances1.put("1",innerMap);
         
         Ledger ledger1 = new Ledger(balances1,new ArrayList<>());
 
@@ -110,8 +111,9 @@ public class UnitTestServices {
         .messageId("1")
         .transactionAmount(TestLoadAmount)
         .build();
-        HashMap<String, Amount> balances1 = new HashMap<>();
-        balances1.put("1",TestLoadAmount);
+        HashMap<String, HashMap<String, Amount>> balances1 = new HashMap<>();
+        HashMap<String, Amount> innerMap = new HashMap<>(){{put("USD",TestLoadAmount);}};
+        balances1.put("1",innerMap);
         
         Ledger ledger1 = new Ledger(balances1,new ArrayList<>());
 

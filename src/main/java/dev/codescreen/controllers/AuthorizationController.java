@@ -2,6 +2,7 @@ package dev.codescreen.controllers;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.HashMap;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -18,10 +19,10 @@ public class AuthorizationController {
     Ledger ledger;
 
     // See balances of all the users in the system.
-    // @PutMapping("/user")
-    // public String seeUsers(@RequestBody String userId) throws Exception 
+    // @GetMapping("/user")
+    // public HashMap<String, HashMap<String,Amount>> seeUsers() throws Exception 
     // {
-    //     return ledger.UsersList(userId);
+    //     return ledger.UsersList();
     // }
 
     // Ping the server to check if the system is up and running.
