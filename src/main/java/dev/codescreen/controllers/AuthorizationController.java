@@ -2,17 +2,11 @@ package dev.codescreen.controllers;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
 import dev.codescreen.models.*;
@@ -24,11 +18,11 @@ public class AuthorizationController {
     Ledger ledger;
 
     // See balances of all the users in the system.
-    @GetMapping("/users")
-    public Map<String, Amount> seeUsers() throws Exception 
-    {
-        return ledger.UsersList();
-    }
+    // @PutMapping("/user")
+    // public String seeUsers(@RequestBody String userId) throws Exception 
+    // {
+    //     return ledger.UsersList(userId);
+    // }
 
     // Ping the server to check if the system is up and running.
     @GetMapping("/ping")
@@ -56,9 +50,9 @@ public class AuthorizationController {
     }
 
     // see the event logs for all past transactions.
-    @GetMapping("/logs")
-    public ArrayList<TransactionEvent> viewLog() throws Exception 
-    {
-        return ledger.viewLog();
-    }    
+    // @GetMapping("/logs")
+    // public ArrayList<TransactionEvent> viewLog() throws Exception 
+    // {
+    //     return ledger.viewLog();
+    // }    
 }
