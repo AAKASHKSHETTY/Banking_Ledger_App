@@ -50,11 +50,11 @@ Here’s a breakdown of the key criteria we’ll be considering when grading you
 
 3) Ensure you have Java and Maven installed.
 
-4) Build the project using Maven: mvn clean install.
+4) Build the project using Maven: `mvn clean install`.
 
-5) Run the application using Maven: mvn spring-boot:run.
+5) Run the application using Maven: `mvn spring-boot:run`.
 
-6) The server will start locally at http://localhost:8080.
+6) The server will start locally at `http://localhost:8080`.
 
 7) You can test the system locally using Postman.
 
@@ -125,9 +125,9 @@ This system consists of 3 Layers: Controller, Service and Data Layers.
 
 1) Users can load multiple currencies but cannot debit a currency they haven't already loaded.
 
-2) Loading (credits) will create a new user if not already present.
+2) Loading(credits) will create a new user if not already present.
 
-3) Authorizations (debits) are only allowed if the user exists and has a balance.
+3) Authorizations(debits) are only allowed if the user exists and has a balance.
 
 4) Transactions with the same message IDs are permitted.
 
@@ -139,21 +139,21 @@ This system consists of 3 Layers: Controller, Service and Data Layers.
 
 ## Bonus: Deployment considerations
 
-1) Version Control with GitHub: Host the Java code on GitHub for version control. 
+1) **Version Control with GitHub:** Host the Java code on GitHub for version control. 
 
-2) Continuous Integration with GitHub Actions: Implement GitHub Actions for automated build and test processes. 
+2) **Continuous Integration with GitHub Actions:** Implement GitHub Actions for automated build and test processes. 
 
-3) Build and Packaging with Maven: Generate a Jar File.
+3) **Build and Packaging with Maven:** Generate a Jar File.
 
-4) Containerization with Docker: Dockerize the Java application by creating a Docker image for easier to deploy and scale.
+4) **Containerization with Docker:** Dockerize the Java application by creating a Docker image for easier to deploy and scale.
 
-5) Container Orchestration with Kubernetes: Deploy Docker containers to a Kubernetes cluster for container orchestration.
+5) **Container Orchestration with Kubernetes:** Deploy Docker containers to a Kubernetes cluster for container orchestration.
 
-6) Cloud Platform Deployment for Reliability and Scalability: Host your application on a cloud platform like AWS, MS Azure or GCP.
+6) **Cloud Platform Deployment for Reliability and Scalability:** Host your application on a cloud platform like AWS, MS Azure or GCP.
 
-7) Continuous Deployment Pipeline: Implement a CD pipeline to automate the deployment process using tools like Jenkins or GitLab CI/CD
+7) **Continuous Deployment Pipeline:** Implement a CD pipeline to automate the deployment process using tools like Jenkins or GitLab CI/CD
 
-8) Monitoring and Observability: Set up monitoring and observability tools like Prometheus and Grafana to track the health and performance of the deployed application.
+8) **Monitoring and Observability:** Set up monitoring and observability tools like Prometheus and Grafana to track the health and performance of the deployed application.
 
 ## Notes
 
