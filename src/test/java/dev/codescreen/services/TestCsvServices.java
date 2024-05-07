@@ -25,7 +25,7 @@ public class TestCsvServices {
     
     // Fetching CSV File for parameterized Tests, as to perform multiple both authorization and load on multiple test cases.
     @ParameterizedTest
-    @CsvFileSource(resources = "test1.csv", numLinesToSkip = 1)
+    @CsvFileSource(resources = "/test1.csv", numLinesToSkip = 1)
     public void testMultipleStatements(String action, String msgId, String userId, String debitOrCredit, String amount, String expectedResponseCode, String expectedBalance) throws Exception {
 
         // If action is AUTHORIZATION Run tests for Authorization.
