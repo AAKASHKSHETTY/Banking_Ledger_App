@@ -69,8 +69,6 @@
 
 ## Design considerations
 
-<img width="797" alt="image" src="https://github.com/codescreen/CodeScreen_zx2awhot/assets/58876667/5881051d-1dbf-436b-a62d-e0556bc2de0f">
-
 This system consists of 3 Layers: Controller, Service and Data Layers.
 
     - Controller Layer : AuthorizationController.java, Manages all 3 requests namely ping(), authorization(), load().
