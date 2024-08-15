@@ -95,24 +95,6 @@ This system consists of 3 Layers: Controller, Service and Data Layers.
 
 7) All amounts and balances are rounded to 2 decimal places.
 
-## Bonus: Deployment considerations
-
-1) **Version Control with GitHub**: Host the Java code on GitHub for version control. 
-
-2) **Continuous Integration with GitHub Actions**: Implement GitHub Actions for automated build and test processes. 
-
-3) **Build and Packaging with Maven**: Generate a Jar File.
-
-4) **Containerization with Docker**: Dockerize the Java application by creating a Docker image for easier to deploy and scale.
-
-5) **Container Orchestration with Kubernetes**: Deploy Docker containers to a Kubernetes cluster for container orchestration.
-
-6) **Cloud Platform Deployment for Reliability and Scalability**: Host your application on a cloud platform like AWS, MS Azure or GCP.
-
-7) **Continuous Deployment Pipeline**: Implement a CD pipeline to automate the deployment process using tools like Jenkins or GitLab CI/CD.
-
-8) **Monitoring and Observability**: Set up monitoring and observability tools like Prometheus and Grafana to track the health and performance of the deployed application.
-
 ## Notes
 
 1) Uncomment lines 22-26 in AuthorizationCotroller.java and lines 30-33 to see user balances in the system. `http://localhost:8080/user`
